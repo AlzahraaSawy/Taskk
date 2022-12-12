@@ -1,0 +1,15 @@
+on: 
+  push:
+    branches:
+      - newbranch
+      
+jobs:
+  build:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: "building image"
+        run: docker build -t alzahraasawy/myyimage .
+        
+      - name: "pushing image"
+        run: docker push alzahraasawy/myyimage 
+      
