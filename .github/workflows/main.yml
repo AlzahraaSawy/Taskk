@@ -7,9 +7,8 @@ jobs:
   build:
     runs-on: Ubuntu-latest
     steps:
-      - name: "building image"
+      - name: building image
         run: docker build -t alzahraasawy/myyimage .
         
-      - name: "pushing image"
+      - name: pushing image
         run: docker push alzahraasawy/myyimage 
-      
