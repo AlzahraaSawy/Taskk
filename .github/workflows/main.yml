@@ -9,3 +9,8 @@ jobs:
      
       - name: 'login to docker'
         run: docker login --username ${{ secrets.DockerUserName }} --password ${{ secrets.DockerPassword }}
+      - name: 'building image'
+        run: docker build -t ${{ secrets.DockerUserName }}/imagetask .
+        
+      - name: 'pushing to docker hup'
+        run: docker push ${{ secrets.DockerUserName }}/imagetask
